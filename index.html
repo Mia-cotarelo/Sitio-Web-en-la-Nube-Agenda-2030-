@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFiltro | ODS 14 Vida Submarina</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e3f2fd; 
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        
+        .menu {
+            background-color: #0077b6;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+
+        .menu a:hover {
+            background-color: #00b4d8;
+        }
+
+        
+        .pagina {
+            max-width: 880px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+      
+        .portada {
+            background: linear-gradient(135deg, #023e8a, #0077b6);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .portada h1 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .portada p {
+            margin-bottom: 18px;
+            color: #e0f7fa;
+        }
+
+       
+        .boton {
+            display: inline-block;
+            background-color: #90e0ef;
+            color: #023e8a;
+            padding: 10px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .boton:hover {
+            background-color: #ffffff;
+        }
+
+        
+        .tarjeta {
+            background-color: #ffffff;
+            padding: 28px;
+            border-radius: 16px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 10px rgba(0, 119, 182, 0.1);
+        }
+
+        .tarjeta h2 {
+            color: #0077b6;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .tarjeta p {
+            margin-bottom: 12px;
+        }
+
+        .foto {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+       
+        .dos-columnas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .cuadro {
+            background-color: #f0f9ff;
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #00b4d8;
+        }
+
+        .cuadro h3 {
+            color: #023e8a;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+      
+        .tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            background-color: #caf0f8;
+            color: #023e8a;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tab.activo, .tab:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        .caja-tab {
+            display: none;
+            background-color: #f8fafc;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+
+        .caja-tab.visible {
+            display: block;
+        }
+
+        
+        .simulador {
+            background-color: #e0f2fe;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .agua {
+            background-color: #8d6e63;
+            color: white;
+            padding: 14px;
+            border-radius: 10px;
+            margin: 12px auto;
+            max-width: 450px;
+            font-weight: bold;
+            transition: background-color 0.6s;
+        }
+
+        .agua.limpia {
+            background-color: #00b4d8;
+        }
+
+        
+        .pie {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="menu">
+        <strong>EcoFiltro | ODS 14</strong>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">Proyecto</a>
+            <a href="#elaboracion">Elaboración</a>
+            <a href="#funcionamiento">Funcionamiento</a>
+            <a href="#ods14">ODS 14</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+    </header>
+
+    <main class="pagina">
+
+        <section id="inicio" class="portada">
+            <h1>Una nueva forma de cuidar el agua</h1>
+            <p>Nuestro proyecto busca desarrollar una alternativa innovadora para el cuidado de los cuerpos de agua mediante un filtro elaborado con cabello reciclado. Aprovechamos un material que normalmente se desecha para darle una nueva función dentro de un sistema de filtración.</p>
+            <a href="#proyecto" class="boton">Conoce nuestro proyecto</a>
+        </section>
+
+        <section id="proyecto" class="tarjeta">
+            <h2>Del cabello al cuidado del agua</h2>
+            <img class="foto" src="agua.png" alt="Agua limpia">
+            <p>El proyecto consiste en recolectar cabello que normalmente sería desechado y utilizarlo como parte de un sistema de filtración. La idea es investigar sus propiedades y comprobar mediante pruebas qué contaminantes puede ayudar a retener.</p>
+            
+            <div class="dos-columnas">
+                <div class="cuadro">
+                    <h3>¿Qué hacemos y por qué?</h3>
+                    <p>Creamos y estudiamos un filtro de cabello porque la contaminación de los cuerpos de agua afecta a los ecosistemas, las especies y las comunidades que dependen de ellos.</p>
+                </div>
+                <div class="cuadro">
+                    <h3>Objetivos principales</h3>
+                    <p>Reutilizar cabello que terminaría como residuo, desarrollar un prototipo de filtro, promover la economía circular y vincular el proyecto con el ODS 14: Vida Submarina.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="elaboracion" class="tarjeta">
+            <h2>¿Cómo elaboramos nuestro filtro?</h2>
+            <p>Selecciona una fase para ver los pasos de elaboración:</p>
+
+            <div class="tabs">
+                <button class="tab activo" onclick="verPaso('paso1', this)">1. Recolección y Limpieza</button>
+                <button class="tab" onclick="verPaso('paso2', this)">2. Secado y Preparación</button>
+                <button class="tab" onclick="verPaso('paso3', this)">3. Armado y Prueba</button>
+            </div>
+
+            <div id="paso1" class="caja-tab visible">
+                <p><strong>Recolección y limpieza:</strong> Se recolecta cabello limpio proveniente de salones de belleza o barberías. Después se lava cuidadosamente para eliminar suciedad, aceites, productos cosméticos y otros residuos que puedan afectar el experimento.</p>
+            </div>
+
+            <div id="paso2" class="caja-tab">
+                <p><strong>Secado y preparación:</strong> Después de limpiarlo, el cabello se deja secar completamente. Luego se organiza y compacta para formar una capa filtrante dentro de una malla o estructura que permita el paso del agua.</p>
+            </div>
+
+            <div id="paso3" class="caja-tab">
+                <p><strong>Estructura, instalación y análisis:</strong> Se coloca en un recipiente que mantenga el cabello en su lugar sin dispersarse, se instala en el sistema de prueba, se hace pasar el agua y se comparan los resultados antes y después.</p>
+            </div>
+        </section>
+
+        <section id="funcionamiento" class="tarjeta">
+            <h2>Funcionamiento y cuerpos de agua</h2>
+            <p>El cabello contiene <strong>queratina</strong> y presenta características que permiten investigar su interacción con determinadas sustancias. Está pensado para estudiarse en ríos, lagos, lagunas, canales, estanques y humedales, considerando siempre las condiciones de cada lugar.</p>
+
+            <div class="simulador">
+                <p><strong>Prueba el funcionamiento del filtro:</strong></p>
+                <div id="cajaAgua" class="agua">Agua contaminada antes de filtrar</div>
+                <button class="boton" onclick="filtrarAgua()">Activar filtro de cabello</button>
+            </div>
+        </section>
+
+        <section id="ods14" class="tarjeta">
+            <h2>ODS 14: Vida Submarina e Investigación</h2>
+            <img class="foto" src="arrecife.png" alt="Vida submarina">
+            <p>El ODS 14 busca conservar los océanos, mares y recursos marinos, con la meta de prevenir y reducir la contaminación marina producida en tierra. Nuestro proyecto aporta reutilización, cuidado del agua, conciencia ambiental, innovación y economía circular.</p>
+            <p><strong>Proceso de investigación:</strong> Preparamos una muestra de agua conocida, medimos sus condiciones iniciales, la pasamos por el filtro, analizamos el agua filtrada, comparamos el antes y después y registramos los resultados con fotografías, tablas y gráficas.</p>
+        </section>
+
+        <section id="nosotros" class="tarjeta">
+            <h2>Conoce nuestra empresa</h2>
+            <div class="dos-columnas">
+                <div class="cuadro">
+                    <h3>Misión y Visión</h3>
+                    <p>Desarrollar una alternativa innovadora y sostenible para el cuidado de los cuerpos de agua mediante la reutilización del cabello, promoviendo la protección de los ecosistemas acuáticos.</p>
+                </div>
+                <div class="cuadro">
+                    <h3>Valores</h3>
+                    <p>Responsabilidad ambiental, innovación, investigación, sostenibilidad, reutilización y compromiso con los ecosistemas.</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;"><strong>Integrantes:</strong> Maytte Palomares Miranda, N.L. 22 (Gerente General y Producción/Operación); Mia Samantha Cotarelo Martínez, N.L. 6 (Ventas y Marketing); Zahara Camila Miravette Ocampo, N.L. 18 (Finanzas y Contabilidad).</p>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <p>Proyecto Escolar • Agenda 2030 — ODS 14: Vida Submarina</p>
+    </footer>
+
+    <script>
+        function verPaso(id, boton) {
+            document.querySelectorAll('.caja-tab').forEach(caja => caja.classList.remove('visible'));
+            document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('activo'));
+            document.getElementById(id).classList.add('visible');
+            boton.classList.add('activo');
+        }
+
+        let estaLimpia = false;
+        function filtrarAgua() {
+            let agua = document.getElementById('cajaAgua');
+            if (!estaLimpia) {
+                agua.classList.add('limpia');
+                agua.textContent = "Agua filtrada (contaminantes retenidos)";
+                estaLimpia = true;
+            } else {
+                agua.classList.remove('limpia');
+                agua.textContent = "Agua contaminada antes de filtrar";
+                estaLimpia = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
